@@ -31,7 +31,6 @@ class WeatherViewController: UIViewController {
 }
 
     func setupWeatherData() {
-        print("Météo")
         weatherService.getWeather() { (success, weatherStruc) in
             if success {
                 guard let weatherStruc = weatherStruc else {return}
