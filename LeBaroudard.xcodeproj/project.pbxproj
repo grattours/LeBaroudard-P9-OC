@@ -27,6 +27,7 @@
 		FCBEF2F022200C7800B5F6AE /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCBEF2EF22200C7800B5F6AE /* ApiKeys.plist */; };
 		FCBEF2F22220111F00B5F6AE /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBEF2F12220111F00B5F6AE /* ApiKeys.swift */; };
 		FCC391B3222077D70070F6C3 /* ChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC391B2222077D70070F6C3 /* ChangeViewController.swift */; };
+		FCF42F7D2221F95C00C27B51 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF42F7C2221F95C00C27B51 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		FCBEF2EF22200C7800B5F6AE /* ApiKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		FCBEF2F12220111F00B5F6AE /* ApiKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
 		FCC391B2222077D70070F6C3 /* ChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeViewController.swift; sourceTree = "<group>"; };
+		FCF42F7C2221F95C00C27B51 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			children = (
 				FCBEF2A9221FEA7500B5F6AE /* LaunchScreen.storyboard */,
 				FCBEF2A4221FEA7200B5F6AE /* Main.storyboard */,
+				FCF42F7C2221F95C00C27B51 /* ButtonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				FCBEF2E3221FFA1300B5F6AE /* Change.swift in Sources */,
 				FCBEF2E1221FF9F500B5F6AE /* Weather.swift in Sources */,
 				FCBEF2DD221FF99500B5F6AE /* Extensions.swift in Sources */,
+				FCF42F7D2221F95C00C27B51 /* ButtonView.swift in Sources */,
 				FCBEF2E9221FFA6200B5F6AE /* Translate.swift in Sources */,
 				FCBEF2A1221FEA7200B5F6AE /* AppDelegate.swift in Sources */,
 				FCBEF2F22220111F00B5F6AE /* ApiKeys.swift in Sources */,

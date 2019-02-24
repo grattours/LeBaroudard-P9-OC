@@ -25,44 +25,45 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dj6-hn-BGh">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="490"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fle-dQ-F0a">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fle-dQ-F0a" customClass="ButtonView" customModule="LeBaroudard" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="125" height="100"/>
                                                 <color key="backgroundColor" red="0.51736354827880859" green="0.48727434873580933" blue="0.42743986845016479" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="hCT-D7-K3d"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="vOl-h9-0rh"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
                                                 <state key="normal" title="Change">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.19278883929999999" green="0.23739463089999999" blue="0.32158032060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="CurrencyButton:" destination="6hq-lT-Hvt" eventType="touchUpInside" id="CzQ-Lr-O0S"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQM-Z4-cTu">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQM-Z4-cTu" customClass="ButtonView" customModule="LeBaroudard" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="130" width="125" height="100"/>
                                                 <color key="backgroundColor" red="0.76847261190414429" green="0.84111148118972778" blue="0.72155147790908813" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <state key="normal" title="Traduire">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.19278883929999999" green="0.23739463089999999" blue="0.32158032060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="translateButton:" destination="6hq-lT-Hvt" eventType="touchUpInside" id="uOX-rZ-KUg"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1W-yJ-Xx4">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1W-yJ-Xx4" customClass="ButtonView" customModule="LeBaroudard" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="260" width="125" height="100"/>
                                                 <color key="backgroundColor" red="0.85027080774307251" green="0.79904359579086304" blue="0.60388320684432983" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <state key="normal" title="Météo">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.19278883934020996" green="0.23739463090896606" blue="0.32158032059669495" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="weatherButton:" destination="6hq-lT-Hvt" eventType="touchUpInside" id="twc-Vi-HKp"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdN-Qq-Y6a">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdN-Qq-Y6a" customClass="ButtonView" customModule="LeBaroudard" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="390" width="125" height="100"/>
                                                 <color key="backgroundColor" red="0.43920564649999999" green="0.51099240779999999" blue="0.43528407810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -76,19 +77,18 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="KgW-6f-fEu">
                                         <rect key="frame" x="165" y="0.0" width="125" height="490"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26B-7l-ZdF">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26B-7l-ZdF" customClass="ButtonView" customModule="LeBaroudard" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="125" height="100"/>
                                                 <color key="backgroundColor" red="0.44704884290000002" green="0.51883715389999996" blue="0.4431272745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="Pti-vT-r9N"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="vN8-9d-A4j"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="Boussole">
                                                     <color key="titleColor" red="0.44312727451324463" green="0.51491475105285645" blue="0.43920564651489258" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhb-sE-mVw">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhb-sE-mVw" customClass="ButtonView" customModule="LeBaroudard" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="130" width="125" height="100"/>
                                                 <color key="backgroundColor" red="0.45097035169999999" green="0.52275949720000003" blue="0.44704884290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -96,7 +96,7 @@
                                                     <color key="titleColor" red="0.44312727451324463" green="0.51491475105285645" blue="0.43920564651489258" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I86-xb-QtE">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I86-xb-QtE" customClass="ButtonView" customModule="LeBaroudard" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="260" width="125" height="100"/>
                                                 <color key="backgroundColor" red="0.44704884290000002" green="0.51883715389999996" blue="0.4431272745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -104,7 +104,7 @@
                                                     <color key="titleColor" red="0.43920564651489258" green="0.51099240779876709" blue="0.4352840781211853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5Q-dv-74b">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5Q-dv-74b" customClass="ButtonView" customModule="LeBaroudard" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="390" width="125" height="100"/>
                                                 <color key="backgroundColor" red="0.43920564649999999" green="0.51099240779999999" blue="0.43528407810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -122,7 +122,7 @@
                         <color key="backgroundColor" red="0.55708587169647217" green="0.61565679311752319" blue="0.61568814516067505" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="ehe-va-sNt"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Menu" id="U2P-w2-OAd"/>
+                    <tabBarItem key="tabBarItem" title="Menu" image="baseline_reorder_black_18dp-1" id="U2P-w2-OAd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vr2-6v-M39" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -205,7 +205,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="94R-6K-2rt"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Change" id="1U6-oc-eUm"/>
+                    <tabBarItem key="tabBarItem" title="Change" image="baseline_swap_calls_black_18dp-1" id="1U6-oc-eUm"/>
                     <connections>
                         <outlet property="firstCurrencyLabel" destination="QMc-Aq-d9J" id="lqx-5g-iWE"/>
                         <outlet property="firstCurrencyTextField" destination="Yeg-d8-glS" id="KpS-ao-qyW"/>
@@ -287,7 +287,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1jH-Y0-zaT"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Translate" id="7h0-Ro-tAQ"/>
+                    <tabBarItem key="tabBarItem" title="Translate" image="baseline_g_translate_black_18dp-1" id="7h0-Ro-tAQ"/>
                     <connections>
                         <outlet property="textToTranslate" destination="TVQ-Vt-78O" id="Qkf-bM-CV1"/>
                         <outlet property="textTranslated" destination="Cex-WP-pWE" id="vKr-RF-fxX"/>
@@ -405,7 +405,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Pl-hi-H9I"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Weather" id="ecC-Fv-eJ4"/>
+                    <tabBarItem key="tabBarItem" title="Weather" image="baseline_wb_sunny_black_18dp-1" id="ecC-Fv-eJ4"/>
                     <connections>
                         <outlet property="botCondition" destination="Lpl-P1-3qU" id="9lP-ew-rQN"/>
                         <outlet property="botDate" destination="qQR-ay-ZBo" id="k0r-6J-ofG"/>
@@ -428,7 +428,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JiM-QS-jg4" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dQy-lU-p80">
+                    <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dQy-lU-p80">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -448,5 +448,9 @@
     <resources>
         <image name="01d" width="50" height="50"/>
         <image name="09d" width="50" height="50"/>
+        <image name="baseline_g_translate_black_18dp-1" width="36" height="36"/>
+        <image name="baseline_reorder_black_18dp-1" width="36" height="36"/>
+        <image name="baseline_swap_calls_black_18dp-1" width="36" height="36"/>
+        <image name="baseline_wb_sunny_black_18dp-1" width="36" height="36"/>
     </resources>
 </document>

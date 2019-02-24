@@ -12,6 +12,7 @@ class WelcomeViewController: UIViewController, UITabBarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background04.jpg")!)
     }
     
     
