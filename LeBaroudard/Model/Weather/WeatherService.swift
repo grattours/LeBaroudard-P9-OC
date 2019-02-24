@@ -25,8 +25,6 @@ class WeatherService {
         let City01Id = "5128581"
         let City02Id = "3024266"
         let  URLString = "http://api.openweathermap.org/data/2.5/group?id=\(City01Id),\(City02Id)\(OptionsRequest)&APPID=\(ApiKeyRequest)"
-        print("request")
-        print(URLString)
         return URLString
     }
     
