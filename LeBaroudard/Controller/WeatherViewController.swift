@@ -38,8 +38,6 @@ class WeatherViewController: UIViewController {
                 self.topTemperature.text = String(weatherStruc.list[0].main.temp) + "°C"
                 self.topCondition.text = weatherStruc.list[0].weather[0].description
                 self.topImage.image = UIImage(named: weatherStruc.list[0].weather[0].icon)
-                //self.topImage.image = "http://openweathermap.org/img/w/10d.png"
-                //  conditionImageView.image = UIImage(named: city.primaryCondition.icon)
                 print(weatherStruc.list[0].weather[0].icon)
                 self.botTown.text = weatherStruc.list[1].name
                 self.botTemperature.text = String(weatherStruc.list[1].main.temp) + "°C"

@@ -19,6 +19,7 @@ struct List: Decodable {
 struct Main: Decodable {
     let temp: Double
 }
+// ajout icon
 struct Weather: Decodable {
     let main, description, icon: String
 }

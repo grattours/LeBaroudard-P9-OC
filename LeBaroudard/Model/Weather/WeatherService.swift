@@ -17,10 +17,8 @@ class WeatherService {
     init(weatherSession:URLSession = URLSession(configuration: .default)) {
         self.weatherSession = weatherSession
     }
-    //        let KeyTranslate = valueForAPIKey(named:"API_...")
     func createWeatherRequest() -> String {
         let OptionsRequest = "&units=metric&lang=fr"
-     // let ApiKeyRequest = "&APPID=1bac4ec7d06de26ce7db92af729e93d4"
         let ApiKeyRequest = valueForAPIKey(named:"API_OpenWeathermap")
         let City01Id = "5128581"
         let City02Id = "3024266"
