@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC0423002223E1D100BA752C /* Weather.json in Resources */ = {isa = PBXBuildFile; fileRef = FC0422FF2223E1D100BA752C /* Weather.json */; };
+		FC0423022223E39200BA752C /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0423012223E39200BA752C /* FakeResponseData.swift */; };
 		FCBEF2A1221FEA7200B5F6AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBEF2A0221FEA7200B5F6AE /* AppDelegate.swift */; };
 		FCBEF2A6221FEA7200B5F6AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCBEF2A4221FEA7200B5F6AE /* Main.storyboard */; };
 		FCBEF2A8221FEA7500B5F6AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCBEF2A7221FEA7500B5F6AE /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC0422FF2223E1D100BA752C /* Weather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Weather.json; sourceTree = "<group>"; };
+		FC0423012223E39200BA752C /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
 		FCBEF29D221FEA7200B5F6AE /* LeBaroudard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeBaroudard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCBEF2A0221FEA7200B5F6AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCBEF2A5221FEA7200B5F6AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 			children = (
 				FCBEF2B5221FEA7500B5F6AE /* LeBaroudardTests.swift */,
 				FCBEF2B7221FEA7500B5F6AE /* Info.plist */,
+				FC0422FF2223E1D100BA752C /* Weather.json */,
+				FC0423012223E39200BA752C /* FakeResponseData.swift */,
 			);
 			path = LeBaroudardTests;
 			sourceTree = "<group>";
@@ -339,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC0423002223E1D100BA752C /* Weather.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCBEF2B6221FEA7500B5F6AE /* LeBaroudardTests.swift in Sources */,
+				FC0423022223E39200BA752C /* FakeResponseData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
