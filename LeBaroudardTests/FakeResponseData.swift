@@ -10,22 +10,37 @@ import Foundation
 
 class FakeResponseData {
     
-    // silulation du Json renvoyé par l'API
+    // Fake data
     static var weatherCorrecteData: Data {
         let bundle = Bundle(for: FakeResponseData.self)
         let url = bundle.url(forResource: "Weather", withExtension: "json")
-        return try! Data(contentsOf: url!)
+        let data =  try! Data(contentsOf: url!)
+        return data
     }
-   
+    
+    //    static var currencyCorrecteData: Data {
+    //        let bundle = Bundle(for: FakeResponseData.self)
+    //        let url = bundle.url(forResource: "Currency", withExtension: "json")
+    //        let data =  try! Data(contentsOf: url!)
+    //        return data
+    //    }
+    
+    //    static var translationCorrecteData: Data {
+    //        let bundle = Bundle(for: FakeResponseData.self)
+    //        let url = bundle.url(forResource: "Currency", withExtension: "json")
+    //        let data =  try! Data(contentsOf: url!)
+    //        return data
+    //    }
+    
     
     // simulation d'un json endommagé
-    static let  weatherIncorrectData = "erreur".data(using: .utf8)!
-    // let imageData = "image".data(using: .utf8)!
+    static let  incorrectData = " data error".data(using: .utf8)!
     
-    static let responseOK = HTTPURLResponse(url: URL(string: "http://google.com")!, statusCode: 200, httpVersion: nil, headerFields:  [:])!
+    // Fake responses
+    static let responseOK = HTTPURLResponse(url: URL(string: "http://google.com")!, statusCode: 200, httpVersion: nil, headerFields:  nil)!
     
-    static let responseKO = HTTPURLResponse(url: URL(string: "http://google.com")!, statusCode: 500, httpVersion: nil, headerFields: [:])!
-    
-    class QuotError: Error {} // error est un protocole, on ne peut pas en créer une instance
-    let error = QuotError()   // je crée donc une classe pour obtenir une instance du protocole
+    static let responseKO = HTTPURLResponse(url: URL(string: "http://google.com")!, statusCode: 500, httpVersion: nil, headerFields: nil)!
+    // Fake error
+    class FakeError: Error {} // error est un protocole, on ne peut pas en créer une instance
+    static let error = FakeError()   // je crée donc une classe pour obtenir une instance du protocole
 }

@@ -28,4 +28,7 @@ class WelcomeViewController: UIViewController, UITabBarDelegate {
     @IBAction func translateButton(_ sender: Any) {
         tabBarController!.selectedIndex = 2
     }
+    @IBAction func CompassButton(_ sender: Any) {
+        
+    }
 }

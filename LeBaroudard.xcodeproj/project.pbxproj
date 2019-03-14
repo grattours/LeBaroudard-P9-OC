@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC0423002223E1D100BA752C /* Weather.json in Resources */ = {isa = PBXBuildFile; fileRef = FC0422FF2223E1D100BA752C /* Weather.json */; };
-		FC0423022223E39200BA752C /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0423012223E39200BA752C /* FakeResponseData.swift */; };
+		FC618E60223A8FE40058C0D0 /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC618E5F223A8FE40058C0D0 /* CompassViewController.swift */; };
+		FC618E62223AA76E0058C0D0 /* PositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC618E61223AA76E0058C0D0 /* PositionViewController.swift */; };
+		FC618E68223ABC870058C0D0 /* TraveldiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC618E67223ABC870058C0D0 /* TraveldiaryViewController.swift */; };
+		FC618E6A223ABF780058C0D0 /* GeolocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC618E69223ABF780058C0D0 /* GeolocationViewController.swift */; };
+		FC618E6C223ABFBC0058C0D0 /* FlashlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC618E6B223ABFBC0058C0D0 /* FlashlightViewController.swift */; };
+		FC742BA22225C731004145F9 /* Weather.json in Resources */ = {isa = PBXBuildFile; fileRef = FC742BA12225C731004145F9 /* Weather.json */; };
+		FC742BA42225C80C004145F9 /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC742BA32225C80C004145F9 /* FakeResponseData.swift */; };
+		FC742BA62225C893004145F9 /* URLSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC742BA52225C893004145F9 /* URLSessionFake.swift */; };
+		FC742BAA2225CD37004145F9 /* WeatherServiceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC742BA92225CD37004145F9 /* WeatherServiceTestCase.swift */; };
 		FCBEF2A1221FEA7200B5F6AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBEF2A0221FEA7200B5F6AE /* AppDelegate.swift */; };
 		FCBEF2A6221FEA7200B5F6AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCBEF2A4221FEA7200B5F6AE /* Main.storyboard */; };
 		FCBEF2A8221FEA7500B5F6AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCBEF2A7221FEA7500B5F6AE /* Assets.xcassets */; };
 		FCBEF2AB221FEA7500B5F6AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCBEF2A9221FEA7500B5F6AE /* LaunchScreen.storyboard */; };
-		FCBEF2B6221FEA7500B5F6AE /* LeBaroudardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBEF2B5221FEA7500B5F6AE /* LeBaroudardTests.swift */; };
-		FCBEF2C1221FEA7500B5F6AE /* LeBaroudardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBEF2C0221FEA7500B5F6AE /* LeBaroudardUITests.swift */; };
 		FCBEF2D3221FEC3200B5F6AE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCBEF2D2221FEC3200B5F6AE /* Default-568h@2x.png */; };
 		FCBEF2D5221FF89100B5F6AE /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBEF2D4221FF89000B5F6AE /* WelcomeViewController.swift */; };
 		FCBEF2D7221FF8E500B5F6AE /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBEF2D6221FF8E500B5F6AE /* WeatherViewController.swift */; };
@@ -50,8 +55,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FC0422FF2223E1D100BA752C /* Weather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Weather.json; sourceTree = "<group>"; };
-		FC0423012223E39200BA752C /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
+		FC618E5F223A8FE40058C0D0 /* CompassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
+		FC618E61223AA76E0058C0D0 /* PositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PositionViewController.swift; path = LeBaroudard/Controller/PositionViewController.swift; sourceTree = SOURCE_ROOT; };
+		FC618E67223ABC870058C0D0 /* TraveldiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TraveldiaryViewController.swift; path = LeBaroudard/Controller/TraveldiaryViewController.swift; sourceTree = SOURCE_ROOT; };
+		FC618E69223ABF780058C0D0 /* GeolocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GeolocationViewController.swift; path = LeBaroudard/Controller/GeolocationViewController.swift; sourceTree = SOURCE_ROOT; };
+		FC618E6B223ABFBC0058C0D0 /* FlashlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FlashlightViewController.swift; path = LeBaroudard/Controller/FlashlightViewController.swift; sourceTree = SOURCE_ROOT; };
+		FC742BA12225C731004145F9 /* Weather.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Weather.json; path = ../LeBaroudardUITests/Weather.json; sourceTree = "<group>"; };
+		FC742BA32225C80C004145F9 /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FakeResponseData.swift; path = LeBaroudardTests/FakeResponseData.swift; sourceTree = SOURCE_ROOT; };
+		FC742BA52225C893004145F9 /* URLSessionFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = URLSessionFake.swift; path = LeBaroudardTests/URLSessionFake.swift; sourceTree = SOURCE_ROOT; };
+		FC742BA92225CD37004145F9 /* WeatherServiceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceTestCase.swift; sourceTree = "<group>"; };
 		FCBEF29D221FEA7200B5F6AE /* LeBaroudard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeBaroudard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCBEF2A0221FEA7200B5F6AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCBEF2A5221FEA7200B5F6AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,10 +71,8 @@
 		FCBEF2AA221FEA7500B5F6AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCBEF2AC221FEA7500B5F6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCBEF2B1221FEA7500B5F6AE /* LeBaroudardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeBaroudardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCBEF2B5221FEA7500B5F6AE /* LeBaroudardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeBaroudardTests.swift; sourceTree = "<group>"; };
 		FCBEF2B7221FEA7500B5F6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCBEF2BC221FEA7500B5F6AE /* LeBaroudardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeBaroudardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCBEF2C0221FEA7500B5F6AE /* LeBaroudardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeBaroudardUITests.swift; sourceTree = "<group>"; };
 		FCBEF2C2221FEA7500B5F6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCBEF2D2221FEC3200B5F6AE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FCBEF2D4221FF89000B5F6AE /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -140,10 +150,10 @@
 		FCBEF2B4221FEA7500B5F6AE /* LeBaroudardTests */ = {
 			isa = PBXGroup;
 			children = (
-				FCBEF2B5221FEA7500B5F6AE /* LeBaroudardTests.swift */,
+				FC742BA12225C731004145F9 /* Weather.json */,
+				FC742BA32225C80C004145F9 /* FakeResponseData.swift */,
+				FC742BA52225C893004145F9 /* URLSessionFake.swift */,
 				FCBEF2B7221FEA7500B5F6AE /* Info.plist */,
-				FC0422FF2223E1D100BA752C /* Weather.json */,
-				FC0423012223E39200BA752C /* FakeResponseData.swift */,
 			);
 			path = LeBaroudardTests;
 			sourceTree = "<group>";
@@ -151,7 +161,7 @@
 		FCBEF2BF221FEA7500B5F6AE /* LeBaroudardUITests */ = {
 			isa = PBXGroup;
 			children = (
-				FCBEF2C0221FEA7500B5F6AE /* LeBaroudardUITests.swift */,
+				FC742BA92225CD37004145F9 /* WeatherServiceTestCase.swift */,
 				FCBEF2C2221FEA7500B5F6AE /* Info.plist */,
 			);
 			path = LeBaroudardUITests;
@@ -160,8 +170,13 @@
 		FCBEF2CE221FEABB00B5F6AE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FC618E6B223ABFBC0058C0D0 /* FlashlightViewController.swift */,
+				FC618E69223ABF780058C0D0 /* GeolocationViewController.swift */,
+				FC618E67223ABC870058C0D0 /* TraveldiaryViewController.swift */,
+				FC618E61223AA76E0058C0D0 /* PositionViewController.swift */,
 				FCC391B2222077D70070F6C3 /* ChangeViewController.swift */,
 				FCBEF2D4221FF89000B5F6AE /* WelcomeViewController.swift */,
+				FC618E5F223A8FE40058C0D0 /* CompassViewController.swift */,
 				FCBEF2D6221FF8E500B5F6AE /* WeatherViewController.swift */,
 				FCBEF2D8221FF90000B5F6AE /* TranslateViewController.swift */,
 			);
@@ -300,6 +315,7 @@
 					};
 					FCBEF2B0221FEA7500B5F6AE = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 						TestTargetID = FCBEF29C221FEA7200B5F6AE;
 					};
 					FCBEF2BB221FEA7500B5F6AE = {
@@ -345,7 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC0423002223E1D100BA752C /* Weather.json in Resources */,
+				FC742BA22225C731004145F9 /* Weather.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,11 +384,16 @@
 				FCBEF2E5221FFA2300B5F6AE /* ChangeService.swift in Sources */,
 				FCBEF2E3221FFA1300B5F6AE /* Change.swift in Sources */,
 				FCBEF2E1221FF9F500B5F6AE /* Weather.swift in Sources */,
+				FC618E6A223ABF780058C0D0 /* GeolocationViewController.swift in Sources */,
 				FCBEF2DD221FF99500B5F6AE /* Extensions.swift in Sources */,
 				FCF42F7D2221F95C00C27B51 /* ButtonView.swift in Sources */,
+				FC618E6C223ABFBC0058C0D0 /* FlashlightViewController.swift in Sources */,
 				FCBEF2E9221FFA6200B5F6AE /* Translate.swift in Sources */,
 				FCBEF2A1221FEA7200B5F6AE /* AppDelegate.swift in Sources */,
+				FC618E60223A8FE40058C0D0 /* CompassViewController.swift in Sources */,
+				FC618E68223ABC870058C0D0 /* TraveldiaryViewController.swift in Sources */,
 				FCBEF2F22220111F00B5F6AE /* ApiKeys.swift in Sources */,
+				FC618E62223AA76E0058C0D0 /* PositionViewController.swift in Sources */,
 				FCBEF2D9221FF90000B5F6AE /* TranslateViewController.swift in Sources */,
 				FCBEF2D7221FF8E500B5F6AE /* WeatherViewController.swift in Sources */,
 				FCBEF2D5221FF89100B5F6AE /* WelcomeViewController.swift in Sources */,
@@ -384,8 +405,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCBEF2B6221FEA7500B5F6AE /* LeBaroudardTests.swift in Sources */,
-				FC0423022223E39200BA752C /* FakeResponseData.swift in Sources */,
+				FC742BAA2225CD37004145F9 /* WeatherServiceTestCase.swift in Sources */,
+				FC742BA42225C80C004145F9 /* FakeResponseData.swift in Sources */,
+				FC742BA62225C893004145F9 /* URLSessionFake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +415,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCBEF2C1221FEA7500B5F6AE /* LeBaroudardUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +610,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y7TNCJPS5N;
 				INFOPLIST_FILE = LeBaroudardTests/Info.plist;
@@ -599,6 +621,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ac10qt.LeBaroudardTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeBaroudard.app/LeBaroudard";
@@ -610,6 +633,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y7TNCJPS5N;
 				INFOPLIST_FILE = LeBaroudardTests/Info.plist;

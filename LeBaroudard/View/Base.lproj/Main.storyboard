@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Menu-->
+        <!--Welcome View Controller-->
         <scene sceneID="Inh-9w-XzQ">
             <objects>
                 <viewController id="6hq-lT-Hvt" customClass="WelcomeViewController" customModule="LeBaroudard" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,11 +65,14 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdN-Qq-Y6a" customClass="ButtonView" customModule="LeBaroudard" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="390" width="125" height="100"/>
-                                                <color key="backgroundColor" red="0.43920564649999999" green="0.51099240779999999" blue="0.43528407810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal">
-                                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.82739710807800293" green="0.83570736646652222" blue="0.81176131963729858" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="Journal">
+                                                    <color key="titleColor" red="0.19278883929999999" green="0.23739463089999999" blue="0.32158032060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="pGl-jB-pVF" kind="show" id="jsC-ez-UZD"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <variation key="heightClass=compact" axis="horizontal" spacing="10"/>
@@ -77,40 +80,54 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="KgW-6f-fEu">
                                         <rect key="frame" x="165" y="0.0" width="125" height="490"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26B-7l-ZdF" customClass="ButtonView" customModule="LeBaroudard" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26B-7l-ZdF" customClass="ButtonView" customModule="LeBaroudard" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="125" height="100"/>
-                                                <color key="backgroundColor" red="0.44704884290000002" green="0.51883715389999996" blue="0.4431272745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" red="0.90877526998519897" green="0.68908888101577759" blue="0.50975751876831055" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="Pti-vT-r9N"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="vN8-9d-A4j"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                                 <state key="normal" title="Boussole">
-                                                    <color key="titleColor" red="0.44312727451324463" green="0.51491475105285645" blue="0.43920564651489258" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" red="0.19278883929999999" green="0.23739463089999999" blue="0.32158032060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="CompassButton:" destination="6hq-lT-Hvt" eventType="touchUpInside" id="1HK-Ci-X7V"/>
+                                                    <segue destination="eqn-1n-fCL" kind="show" identifier="segueCompass" id="VK5-7j-Lil"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhb-sE-mVw" customClass="ButtonView" customModule="LeBaroudard" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="130" width="125" height="100"/>
-                                                <color key="backgroundColor" red="0.45097035169999999" green="0.52275949720000003" blue="0.44704884290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="backgroundColor" red="0.74447923898696899" green="0.74827998876571655" blue="0.52936989068984985" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <state key="normal" title="Position">
-                                                    <color key="titleColor" red="0.44312727451324463" green="0.51491475105285645" blue="0.43920564651489258" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" red="0.19278883929999999" green="0.23739463089999999" blue="0.32158032060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="sCy-vL-mxa" kind="show" identifier="seguePosition" id="H6O-Ln-ExZ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I86-xb-QtE" customClass="ButtonView" customModule="LeBaroudard" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="260" width="125" height="100"/>
-                                                <color key="backgroundColor" red="0.44704884290000002" green="0.51883715389999996" blue="0.4431272745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="backgroundColor" red="0.83944767713546753" green="0.86200219392776489" blue="0.90196734666824341" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <state key="normal" title="Torche">
-                                                    <color key="titleColor" red="0.43920564651489258" green="0.51099240779876709" blue="0.4352840781211853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" red="0.19278883929999999" green="0.23739463089999999" blue="0.32158032060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="Mdy-oV-Uoi" kind="show" identifier="segueFlashlight" id="eWH-29-GVk"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5Q-dv-74b" customClass="ButtonView" customModule="LeBaroudard" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="390" width="125" height="100"/>
-                                                <color key="backgroundColor" red="0.43920564649999999" green="0.51099240779999999" blue="0.43528407810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="backgroundColor" red="0.68953323364257812" green="0.5983547568321228" blue="0.45094859600067139" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <state key="normal" title="Géoloc">
-                                                    <color key="titleColor" red="0.4470488429069519" green="0.51883715391159058" blue="0.44312727451324463" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" red="0.19278883929999999" green="0.23739463089999999" blue="0.32158032060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="vLx-sJ-ZWm" kind="show" id="GvY-lj-dmo"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="MSO-Sn-Drs"/>
@@ -122,11 +139,11 @@
                         <color key="backgroundColor" red="0.55708587169647217" green="0.61565679311752319" blue="0.61568814516067505" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="ehe-va-sNt"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Menu" image="baseline_reorder_black_18dp-1" id="U2P-w2-OAd"/>
+                    <navigationItem key="navigationItem" id="gaQ-JY-Q7C"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vr2-6v-M39" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1086.9565217391305" y="-549.10714285714278"/>
+            <point key="canvasLocation" x="-131.8840579710145" y="-549.45652173913049"/>
         </scene>
         <!--Change-->
         <scene sceneID="ofN-rU-2wF">
@@ -215,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Srd-jL-zt9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="365" y="-549"/>
+            <point key="canvasLocation" x="678" y="-1284"/>
         </scene>
         <!--Translate-->
         <scene sceneID="fVN-PP-hG4">
@@ -300,7 +317,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-339" y="-999"/>
+            <point key="canvasLocation" x="678" y="-549"/>
         </scene>
         <!--Weather-->
         <scene sceneID="Kbr-KL-QAX">
@@ -314,7 +331,7 @@
                                 <rect key="frame" x="15" y="25" width="384" height="326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ya3-Cf-Pvf" userLabel="Stack Top">
-                                        <rect key="frame" x="87.000000000000014" y="20.000000000000028" width="183.33333333333334" height="266.33333333333331"/>
+                                        <rect key="frame" x="87.000000000000014" y="20.000000000000028" width="183.33333333333334" height="232.33333333333334"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="New York" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2m-Pp-f6k">
@@ -336,10 +353,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01d" translatesAutoresizingMaskIntoConstraints="NO" id="dcR-UX-JJL">
-                                                <rect key="frame" x="66.666666666666671" y="162" width="50" height="50"/>
+                                                <rect key="frame" x="83.666666666666671" y="162" width="16" height="16"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23 °C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsj-qt-dwg">
-                                                <rect key="frame" x="56.000000000000007" y="234" width="71.666666666666686" height="32.333333333333314"/>
+                                                <rect key="frame" x="56.000000000000007" y="200" width="71.666666666666686" height="32.333333333333343"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -354,7 +371,7 @@
                                 <rect key="frame" x="15" y="356" width="384" height="326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Mcw-Sq-cHA">
-                                        <rect key="frame" x="87.999999999999986" y="8" width="174.66666666666666" height="262.66666666666669"/>
+                                        <rect key="frame" x="87.999999999999986" y="8" width="174.66666666666666" height="228.66666666666666"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Colombes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="El1-pT-cmW">
@@ -376,10 +393,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="09d" translatesAutoresizingMaskIntoConstraints="NO" id="34w-aL-i7h">
-                                                <rect key="frame" x="62.333333333333329" y="156" width="50" height="50"/>
+                                                <rect key="frame" x="79.333333333333329" y="156" width="16" height="16"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 °C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNq-My-Er5">
-                                                <rect key="frame" x="58.666666666666671" y="228" width="57.333333333333329" height="34.666666666666686"/>
+                                                <rect key="frame" x="58.666666666666671" y="194" width="57.333333333333329" height="34.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -421,7 +438,88 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yph-DX-YdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-381" y="-157"/>
+            <point key="canvasLocation" x="677" y="195"/>
+        </scene>
+        <!--Flashlight View Controller-->
+        <scene sceneID="QMZ-V9-JLU">
+            <objects>
+                <viewController id="Mdy-oV-Uoi" customClass="FlashlightViewController" customModule="LeBaroudard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nLV-UH-XGb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TORCHE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjx-Hd-KRZ">
+                                <rect key="frame" x="146" y="350" width="122" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.19278883929999999" green="0.23739463089999999" blue="0.32158032060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.86689847707748413" green="0.89344829320907593" blue="0.92941790819168091" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="cjx-Hd-KRZ" firstAttribute="centerX" secondItem="nLV-UH-XGb" secondAttribute="centerX" id="eXs-B4-UUF"/>
+                            <constraint firstItem="cjx-Hd-KRZ" firstAttribute="centerY" secondItem="nLV-UH-XGb" secondAttribute="centerY" id="xMD-Gn-uCU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ftX-Lv-SVz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i6V-qc-3HP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1462.3188405797102" y="195.6521739130435"/>
+        </scene>
+        <!--Traveldiary View Controller-->
+        <scene sceneID="j7O-8k-hh5">
+            <objects>
+                <viewController id="pGl-jB-pVF" customClass="TraveldiaryViewController" customModule="LeBaroudard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ziY-B7-9yh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JOURNAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMt-Wb-uzM">
+                                <rect key="frame" x="136.66666666666666" y="350" width="140.99999999999997" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.19278883929999999" green="0.23739463089999999" blue="0.32158032060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82739710807800293" green="0.83570736646652222" blue="0.81176131963729858" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="dMt-Wb-uzM" firstAttribute="centerY" secondItem="ziY-B7-9yh" secondAttribute="centerY" id="GxI-C9-v3R"/>
+                            <constraint firstItem="dMt-Wb-uzM" firstAttribute="centerX" secondItem="ziY-B7-9yh" secondAttribute="centerX" id="IS3-NM-pYx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MQP-zH-dcT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K3O-Ra-y7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2223" y="200"/>
+        </scene>
+        <!--Position View Controller-->
+        <scene sceneID="BQD-mL-Fci">
+            <objects>
+                <viewController id="sCy-vL-mxa" customClass="PositionViewController" customModule="LeBaroudard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lWg-b5-Mgh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POSITION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxQ-VW-bar">
+                                <rect key="frame" x="125" y="347" width="164" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <color key="textColor" red="0.19278883929999999" green="0.23739463089999999" blue="0.32158032060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.74447923898696899" green="0.74827998876571655" blue="0.52936989068984985" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="xxQ-VW-bar" firstAttribute="centerY" secondItem="lWg-b5-Mgh" secondAttribute="centerY" id="Wvj-KH-xny"/>
+                            <constraint firstItem="xxQ-VW-bar" firstAttribute="centerX" secondItem="lWg-b5-Mgh" secondAttribute="centerX" id="g7D-hE-bw2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dcJ-7i-zrf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ysz-8A-cot" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1490" y="-549"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Z74-8F-Nsu">
@@ -434,7 +532,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="6hq-lT-Hvt" kind="relationship" relationship="viewControllers" id="3au-Jn-f5d"/>
+                        <segue destination="D27-NX-aVP" kind="relationship" relationship="viewControllers" id="3au-Jn-f5d"/>
                         <segue destination="AjI-0O-wUq" kind="relationship" relationship="viewControllers" id="l6h-oa-E4u"/>
                         <segue destination="JaY-vD-H2t" kind="relationship" relationship="viewControllers" id="ya7-s5-Gv3"/>
                         <segue destination="0MC-4U-8Lf" kind="relationship" relationship="viewControllers" id="bgb-PB-OvB"/>
@@ -444,13 +542,110 @@
             </objects>
             <point key="canvasLocation" x="-1878" y="-549"/>
         </scene>
+        <!--Compass View Controller-->
+        <scene sceneID="oMk-4d-wCx">
+            <objects>
+                <viewController id="eqn-1n-fCL" customClass="CompassViewController" customModule="LeBaroudard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yHg-Cm-7X8" customClass="ARSCNView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boussole031" translatesAutoresizingMaskIntoConstraints="NO" id="Bw9-8i-n0G">
+                                <rect key="frame" x="19.666666666666657" y="180.66666666666663" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="FEe-U5-yKR"/>
+                                    <constraint firstAttribute="height" constant="375" id="bCu-rR-YD0"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="axe-1" translatesAutoresizingMaskIntoConstraints="NO" id="uzy-Ue-ChT">
+                                <rect key="frame" x="19.666666666666657" y="53" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="375" id="WNg-ls-VSq"/>
+                                    <constraint firstAttribute="width" constant="375" id="XJp-Ax-QFX"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="ipM-UJ-J0I"/>
+                                    <constraint firstAttribute="height" constant="375" id="tc5-vO-Eo7"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="decoHaut" translatesAutoresizingMaskIntoConstraints="NO" id="Zqm-mC-tL2">
+                                <rect key="frame" x="285" y="64" width="129" height="182"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90877526998519897" green="0.68908888101577759" blue="0.50975751876831055" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="uzy-Ue-ChT" firstAttribute="centerX" secondItem="yHg-Cm-7X8" secondAttribute="centerX" id="5Dh-In-0qb"/>
+                            <constraint firstItem="uzy-Ue-ChT" firstAttribute="centerY" secondItem="yHg-Cm-7X8" secondAttribute="centerY" constant="-127.5" id="8zL-n9-isR"/>
+                            <constraint firstItem="Bw9-8i-n0G" firstAttribute="centerX" secondItem="yHg-Cm-7X8" secondAttribute="centerX" id="lbN-qY-PrS"/>
+                            <constraint firstItem="uzy-Ue-ChT" firstAttribute="centerX" secondItem="yHg-Cm-7X8" secondAttribute="centerX" id="myI-8O-dsL"/>
+                            <constraint firstItem="uzy-Ue-ChT" firstAttribute="centerY" secondItem="yHg-Cm-7X8" secondAttribute="centerY" constant="-127.5" id="nl5-Og-fSg"/>
+                            <constraint firstItem="Bw9-8i-n0G" firstAttribute="centerY" secondItem="yHg-Cm-7X8" secondAttribute="centerY" id="teT-w3-pLL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tyq-SM-Rs3"/>
+                    </view>
+                    <connections>
+                        <outlet property="compassImageView" destination="Bw9-8i-n0G" id="TUI-dA-Mus"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="78Y-ff-W0u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1387" y="-1285"/>
+        </scene>
+        <!--Geolocation View Controller-->
+        <scene sceneID="mzB-q5-GTn">
+            <objects>
+                <viewController id="vLx-sJ-ZWm" customClass="GeolocationViewController" customModule="LeBaroudard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Yd-eF-hId">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GEOLOCALISATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmU-d5-Egu">
+                                <rect key="frame" x="68.666666666666686" y="350" width="277" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.68953323364257812" green="0.5983547568321228" blue="0.45094859600067139" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="rmU-d5-Egu" firstAttribute="centerY" secondItem="2Yd-eF-hId" secondAttribute="centerY" id="8qT-II-GFo"/>
+                            <constraint firstItem="rmU-d5-Egu" firstAttribute="centerX" secondItem="2Yd-eF-hId" secondAttribute="centerX" id="uzz-b8-Wcg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Q3c-yo-0vx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PNn-1b-Ycc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2189.8550724637685" y="-550.27173913043487"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="e6W-CS-piG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D27-NX-aVP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Menu" image="baseline_reorder_black_18dp-1" id="U2P-w2-OAd"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RRV-aK-2K5">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6hq-lT-Hvt" kind="relationship" relationship="rootViewController" id="kjc-Zs-j3T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z8b-RP-Fdu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1057" y="-549"/>
+        </scene>
     </scenes>
     <resources>
         <image name="01d" width="50" height="50"/>
         <image name="09d" width="50" height="50"/>
+        <image name="axe-1" width="800" height="800"/>
         <image name="baseline_g_translate_black_18dp-1" width="36" height="36"/>
         <image name="baseline_reorder_black_18dp-1" width="36" height="36"/>
         <image name="baseline_swap_calls_black_18dp-1" width="36" height="36"/>
         <image name="baseline_wb_sunny_black_18dp-1" width="36" height="36"/>
+        <image name="boussole031" width="626" height="626"/>
+        <image name="decoHaut" width="127" height="214"/>
     </resources>
 </document>

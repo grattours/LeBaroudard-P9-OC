@@ -17,6 +17,7 @@ class WeatherService {
     init(weatherSession:URLSession = URLSession(configuration: .default)) {
         self.weatherSession = weatherSession
     }
+    
     func createWeatherRequest() -> String {
         let OptionsRequest = "&units=metric&lang=fr"
         let ApiKeyRequest = valueForAPIKey(named:"API_OpenWeathermap")
