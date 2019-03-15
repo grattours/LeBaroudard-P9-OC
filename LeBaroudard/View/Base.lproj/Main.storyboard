@@ -331,7 +331,7 @@
                                 <rect key="frame" x="15" y="25" width="384" height="326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ya3-Cf-Pvf" userLabel="Stack Top">
-                                        <rect key="frame" x="87.000000000000014" y="20.000000000000028" width="183.33333333333334" height="232.33333333333334"/>
+                                        <rect key="frame" x="87.000000000000014" y="20.000000000000028" width="183.33333333333334" height="266.33333333333331"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="New York" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2m-Pp-f6k">
@@ -353,10 +353,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01d" translatesAutoresizingMaskIntoConstraints="NO" id="dcR-UX-JJL">
-                                                <rect key="frame" x="83.666666666666671" y="162" width="16" height="16"/>
+                                                <rect key="frame" x="66.666666666666671" y="162" width="50" height="50"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23 °C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsj-qt-dwg">
-                                                <rect key="frame" x="56.000000000000007" y="200" width="71.666666666666686" height="32.333333333333343"/>
+                                                <rect key="frame" x="56.000000000000007" y="234" width="71.666666666666686" height="32.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -371,7 +371,7 @@
                                 <rect key="frame" x="15" y="356" width="384" height="326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Mcw-Sq-cHA">
-                                        <rect key="frame" x="87.999999999999986" y="8" width="174.66666666666666" height="228.66666666666666"/>
+                                        <rect key="frame" x="87.999999999999986" y="8" width="174.66666666666666" height="262.66666666666669"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Colombes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="El1-pT-cmW">
@@ -393,10 +393,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="09d" translatesAutoresizingMaskIntoConstraints="NO" id="34w-aL-i7h">
-                                                <rect key="frame" x="79.333333333333329" y="156" width="16" height="16"/>
+                                                <rect key="frame" x="62.333333333333329" y="156" width="50" height="50"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 °C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNq-My-Er5">
-                                                <rect key="frame" x="58.666666666666671" y="194" width="57.333333333333329" height="34.666666666666657"/>
+                                                <rect key="frame" x="58.666666666666671" y="228" width="57.333333333333329" height="34.666666666666686"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -570,11 +570,20 @@
                                 <rect key="frame" x="285" y="64" width="129" height="182"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="decoBas" translatesAutoresizingMaskIntoConstraints="NO" id="EvN-1Q-ych">
+                                <rect key="frame" x="0.0" y="529" width="144" height="158"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="HI9-GT-eRT"/>
+                                    <constraint firstAttribute="height" constant="158" id="TWW-If-Ja1"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.90877526998519897" green="0.68908888101577759" blue="0.50975751876831055" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="uzy-Ue-ChT" firstAttribute="centerX" secondItem="yHg-Cm-7X8" secondAttribute="centerX" id="5Dh-In-0qb"/>
+                            <constraint firstItem="EvN-1Q-ych" firstAttribute="leading" secondItem="tyq-SM-Rs3" secondAttribute="leading" id="5kv-D9-hXO"/>
                             <constraint firstItem="uzy-Ue-ChT" firstAttribute="centerY" secondItem="yHg-Cm-7X8" secondAttribute="centerY" constant="-127.5" id="8zL-n9-isR"/>
+                            <constraint firstItem="EvN-1Q-ych" firstAttribute="bottom" secondItem="tyq-SM-Rs3" secondAttribute="bottom" id="Fw1-kk-wac"/>
                             <constraint firstItem="Bw9-8i-n0G" firstAttribute="centerX" secondItem="yHg-Cm-7X8" secondAttribute="centerX" id="lbN-qY-PrS"/>
                             <constraint firstItem="uzy-Ue-ChT" firstAttribute="centerX" secondItem="yHg-Cm-7X8" secondAttribute="centerX" id="myI-8O-dsL"/>
                             <constraint firstItem="uzy-Ue-ChT" firstAttribute="centerY" secondItem="yHg-Cm-7X8" secondAttribute="centerY" constant="-127.5" id="nl5-Og-fSg"/>
@@ -588,7 +597,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78Y-ff-W0u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1387" y="-1285"/>
+            <point key="canvasLocation" x="1386.9565217391305" y="-1286.413043478261"/>
         </scene>
         <!--Geolocation View Controller-->
         <scene sceneID="mzB-q5-GTn">
@@ -646,6 +655,7 @@
         <image name="baseline_swap_calls_black_18dp-1" width="36" height="36"/>
         <image name="baseline_wb_sunny_black_18dp-1" width="36" height="36"/>
         <image name="boussole031" width="626" height="626"/>
+        <image name="decoBas" width="275" height="287"/>
         <image name="decoHaut" width="127" height="214"/>
     </resources>
 </document>
