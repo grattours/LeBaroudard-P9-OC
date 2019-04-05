@@ -15,7 +15,6 @@ class WelcomeViewController: UIViewController, UITabBarDelegate {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background04.jpg")!)
     }
     
-    
     @IBAction func CurrencyButton(_ sender: Any) {
         tabBarController!.selectedIndex = 3
         

@@ -46,5 +46,13 @@ extension UIViewController {
     @objc func dissmissKeyboard() {
         view.endEditing(true)
     }
+
 }
 
+// convertit une vue en image, élégant non ?
+extension UIView {
+    var image: UIImage? {
+        let renderer = UIGraphicsImageRenderer(bounds: bounds)
+        return renderer.image { rendererContext in layer.render(in: rendererContext.cgContext) }
+    }
+}
