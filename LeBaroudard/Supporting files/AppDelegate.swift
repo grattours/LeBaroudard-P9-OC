@@ -13,18 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let navigationBarAppearance = UINavigationBar.appearance()
-        navigationBarAppearance.tintColor = UIColor.white   // liens après page d'accueil
-        navigationBarAppearance.barTintColor = UIColor.darkGray
-        navigationBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+//        let navigationBarAppearance = UINavigationBar.appearance()
+//        navigationBarAppearance.tintColor = UIColor.white   // liens après page d'accueil
+//        navigationBarAppearance.barTintColor = UIColor.darkGray
+//        navigationBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         let uitabbarAppearance = UITabBar.appearance()
-        uitabbarAppearance.backgroundColor = UIColor.black // fond de la tabbar
-        uitabbarAppearance.tintColor = UIColor.darkText  // couleur des icones de la tabbar
-        uitabbarAppearance.selectedItem?.badgeColor = UIColor.darkGray  // icones tabbar sélectionné
-        uitabbarAppearance.unselectedItemTintColor = UIColor.lightGray // icones tabbar déselectionnés
+        uitabbarAppearance.backgroundColor = UIColor.black // tabbar background color
+        uitabbarAppearance.tintColor = UIColor.darkText    // tabbar icons color
+        uitabbarAppearance.selectedItem?.badgeColor = UIColor.darkGray  // selected tabbar icons color
+        uitabbarAppearance.unselectedItemTintColor = UIColor.lightGray //  unselected tabbar icons color
         
         
         //        navigationBarAppearace.tintColor = uicolorFromHex(0xffffff)

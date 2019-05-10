@@ -46,6 +46,13 @@ extension UIViewController {
     @objc func dissmissKeyboard() {
         view.endEditing(true)
     }
+    
+    // same alerte with title and message as parameter
+    func presentAlert(message: errorMessage) {
+        let alertVC = UIAlertController(title: "Erreur", message: message.rawValue, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(alertVC, animated: true, completion: nil)
+    }
 
 }
 
@@ -54,5 +61,14 @@ extension UIView {
     var image: UIImage? {
         let renderer = UIGraphicsImageRenderer(bounds: bounds)
         return renderer.image { rendererContext in layer.render(in: rendererContext.cgContext) }
+    }
+}
+
+extension UIStackView {
+    func addBackground(color: UIColor) {
+        let subView = UIView(frame: bounds)
+        subView.backgroundColor = color
+        subView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        insertSubview(subView, at: 0)
     }
 }

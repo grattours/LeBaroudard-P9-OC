@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Api Struct Google Traduction
 struct TranslationAPIResult: Decodable {
     let data: TranslationData
 }
@@ -17,5 +18,11 @@ struct TranslationData: Decodable {
 }
 
 struct TranslationText: Decodable {
-    let translatedText: String
+    let translatedText: String?
+}
+
+// to reverse languages
+struct LangageTranslation {
+    static var source = "fr"
+    static var target = "en"
 }

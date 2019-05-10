@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct CurrencyStruct: Decodable {
+//API Struct. Currency
+struct ChangeStruct: Decodable {
     let success: Bool
     let timestamp: Double?
     let base: String?

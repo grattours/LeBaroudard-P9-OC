@@ -9,7 +9,7 @@
 import UIKit
 
 class WeatherViewController: UIViewController {
-    
+    // outlet
     @IBOutlet weak var topTown: UILabel!
     @IBOutlet weak var topCondition: UILabel!
     @IBOutlet weak var topImage: UIImageView!
@@ -22,39 +22,37 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var botTemperature: UILabel!
     @IBOutlet weak var botDate: UILabel!
 
+    // instance
     var weatherService = WeatherService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupJetLagData()
         setupWeatherData()
-}
-
+    }
+    // data from weather API
     func setupWeatherData() {
         weatherService.getWeather() { (success, weatherStruc) in
-            if success {
-                guard let weatherStruc = weatherStruc else {return}
+            if success {                guard let weatherStruc = weatherStruc else {return}
                 self.topTown.text = weatherStruc.list[0].name
-                self.topTemperature.text = String(weatherStruc.list[0].main.temp) + "°C"
+                self.topTemperature.text = weatherStruc.list[0].main.temp!.description + "°C"
                 self.topCondition.text = weatherStruc.list[0].weather[0].description
-                self.topImage.image = UIImage(named: weatherStruc.list[0].weather[0].icon)
-    
+                self.topImage.image = UIImage(named: weatherStruc.list[0].weather[0].icon!)
                 self.botTown.text = weatherStruc.list[1].name
-                self.botTemperature.text = String(weatherStruc.list[1].main.temp) + "°C"
+                self.botTemperature.text = weatherStruc.list[1].main.temp!.description + "°C"
                 self.botCondition.text = weatherStruc.list[1].weather[0].description
-                self.botImage.image = UIImage(named: weatherStruc.list[1].weather[0].icon)
-                
-            } // end success
+                self.botImage.image = UIImage(named: weatherStruc.list[1].weather[0].icon!)
+             } else {
+                self.presentAlert(message: .errorWeatherReception)
+            }
         } // end getweather
     } // end setup
 
-
+    // why not calculate the difference ?
     func setupJetLagData() {
-        // let now = Date()
         botDate.text = ("\(Date().toString())")
         topDate.text = ("\(Date().toStringNY())")
-        //print("New York \(Date().toStringNY())")
-    }
+        }
 
     } // end class
 

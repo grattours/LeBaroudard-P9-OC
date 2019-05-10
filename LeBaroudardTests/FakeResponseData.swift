@@ -18,27 +18,24 @@ class FakeResponseData {
         return data
     }
     
-    //    static var currencyCorrecteData: Data {
-    //        let bundle = Bundle(for: FakeResponseData.self)
-    //        let url = bundle.url(forResource: "Currency", withExtension: "json")
-    //        let data =  try! Data(contentsOf: url!)
-    //        return data
-    //    }
+    static var changeCorrecteData: Data {
+        let bundle = Bundle(for: FakeResponseData.self)
+        let url = bundle.url(forResource: "Change", withExtension: "json")
+        let data =  try! Data(contentsOf: url!)
+        return data
+        }
     
-    //    static var translationCorrecteData: Data {
-    //        let bundle = Bundle(for: FakeResponseData.self)
-    //        let url = bundle.url(forResource: "Currency", withExtension: "json")
-    //        let data =  try! Data(contentsOf: url!)
-    //        return data
-    //    }
-    
+    static var translateCorrecteData: Data {
+        let bundle = Bundle(for: FakeResponseData.self)
+        let url = bundle.url(forResource: "Translate", withExtension: "json")
+        let data =  try! Data(contentsOf: url!)
+        return data
+        }
     
     // simulation d'un json endommagé
     static let  incorrectData = " data error".data(using: .utf8)!
-    
     // Fake responses
     static let responseOK = HTTPURLResponse(url: URL(string: "http://google.com")!, statusCode: 200, httpVersion: nil, headerFields:  nil)!
-    
     static let responseKO = HTTPURLResponse(url: URL(string: "http://google.com")!, statusCode: 500, httpVersion: nil, headerFields: nil)!
     // Fake error
     class FakeError: Error {} // error est un protocole, on ne peut pas en créer une instance
