@@ -59,8 +59,12 @@ class GpsWeatherViewController: UIViewController {
             if success {
                 guard let gpsWeatherStruc = gpsWeatherStruc else {
                     return }
-                self.gpTemperature.text = gpsWeatherStruc.main!.temp!.description + "°C"
-                self.gpCondition.text = gpsWeatherStruc.weather![0].description
+                if let temp = gpsWeatherStruc.main?.temp {
+                    self.gpTemperature.text = String(temp) + "°C"
+                }
+                if let cond = gpsWeatherStruc.weather?[0].description {
+                    self.gpCondition.text = cond
+                }
                 self.gpImage.image = UIImage(named: gpsWeatherStruc.weather?[0].icon ?? "")
                 self.gpDate.text = ("\(Date().toString())")
             } else {
@@ -97,7 +101,6 @@ class GpsWeatherViewController: UIViewController {
         return CLLocation(latitude: latitude, longitude: longitude)
     }
 
-
     // cases of autorisations or not
     func checkLocationAuthorization() {
 
@@ -105,10 +108,12 @@ class GpsWeatherViewController: UIViewController {
         case .authorizedWhenInUse:
             startTackingUserLocation()
         case .denied:
+            // faire une alerte "autoriser la localisation"
             break
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
         case .restricted:
+            // faire une alerte
             break
         case .authorizedAlways:
             startTackingUserLocation()
@@ -153,8 +158,8 @@ extension GpsWeatherViewController: MKMapViewDelegate {
             guard let placemark = placemarks?.first else {
                 return
             }
-            let lat = String(format: "%.04f", (placemark.location?.coordinate.longitude ?? 0.0)!)
-            let lon = String(format: "%.04f", (placemark.location?.coordinate.latitude ?? 0.0)!)
+            let lat = String(format: "%.04f", (placemark.location?.coordinate.longitude ?? 0.0))
+            let lon = String(format: "%.04f", (placemark.location?.coordinate.latitude ?? 0.0))
             let country = placemark.country ?? ""
             let locality = placemark.locality ?? ""
             // print(placemark.administrativeArea ?? "")

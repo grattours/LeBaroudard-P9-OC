@@ -19,7 +19,9 @@ class GpsWeatherService {
 }
     // compose url endpoint with localisation
     func createGpsWeatherRequest(_ loc2: String) -> String {
-        let  URLString = "http://api.openweathermap.org/data/2.5/weather?\(loc2)&units=metric&lang=fr&APPID=1bac4ec7d06de26ce7db92af729e93d4"
+        let OptionsRequest = "&units=metric&lang=fr"
+        let ApiKeyRequest = valueForAPIKey(named:"API_OpenWeathermap")
+        let  URLString = "http://api.openweathermap.org/data/2.5/weather?\(loc2)\(OptionsRequest)&APPID=\(ApiKeyRequest)"
         return URLString
     }
     

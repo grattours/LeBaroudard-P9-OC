@@ -33,15 +33,24 @@ class WeatherViewController: UIViewController {
     // data from weather API
     func setupWeatherData() {
         weatherService.getWeather() { (success, weatherStruc) in
-            if success {                guard let weatherStruc = weatherStruc else {return}
+            if success {
+                guard let weatherStruc = weatherStruc else {return}
+                if let tempTop = weatherStruc.list[0].main.temp {
+                    self.topTemperature.text = String(tempTop) + "°C"
+                }
                 self.topTown.text = weatherStruc.list[0].name
-                self.topTemperature.text = weatherStruc.list[0].main.temp!.description + "°C"
                 self.topCondition.text = weatherStruc.list[0].weather[0].description
-                self.topImage.image = UIImage(named: weatherStruc.list[0].weather[0].icon!)
+                if let icoT = weatherStruc.list[0].weather[0].icon {
+                      self.topImage.image = UIImage(named: icoT)
+                }
                 self.botTown.text = weatherStruc.list[1].name
-                self.botTemperature.text = weatherStruc.list[1].main.temp!.description + "°C"
+                if let tempBot = weatherStruc.list[1].main.temp {
+                    self.botTemperature.text = String(tempBot) + "°C"
+                }
                 self.botCondition.text = weatherStruc.list[1].weather[0].description
-                self.botImage.image = UIImage(named: weatherStruc.list[1].weather[0].icon!)
+                if let icoB = weatherStruc.list[1].weather[0].icon {
+                    self.topImage.image = UIImage(named: icoB)
+                }
              } else {
                 self.presentAlert(message: .errorWeatherReception)
             }

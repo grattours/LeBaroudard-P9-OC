@@ -27,15 +27,21 @@ class ChangeViewController: UIViewController {
     
     // data from currency API
         func setupCurrencyData() {
+            var AmountToConvert = 0.0
             guard let AmountInput = firstChangeTextField else {return}
-            guard let AmountToConvert = Double(AmountInput.text!) else { return }
+            if let amount = AmountInput.text {
+                let amountD = Double(amount)
+                AmountToConvert = amountD ?? 0.0
+            } else {
+                return
+            }
             changeService.firstAmountToConvert = AmountToConvert
             changeService.getChange() { (success, data) in
                 if success, let currentRate = data?.rates?.USD {
                     DollarRate.rate = currentRate
                     
-                    let rate = DollarRate.rate
-                    let totalConverted = AmountToConvert * rate!
+                    guard let rate = DollarRate.rate else { return }
+                    let totalConverted = AmountToConvert * rate
                     self.secondChangeTextField.text = String(format: "%.2f", totalConverted)
                 } else {
                     self.presentAlert(message: .errorChangeConverter)

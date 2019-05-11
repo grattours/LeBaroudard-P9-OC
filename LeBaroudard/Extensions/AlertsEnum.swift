@@ -20,7 +20,8 @@ enum errorMessage: String {
     //  translate Error messages
     case errorTranslateReception = "Pas de réception de traduction"
     case errorTranslation = "Pas de traduction disponible"
-    case errorTranslationEmpty = " rien à tranduire"
+    case errorTranslationEmpty = " rien à traduire"
+    case errorTranslationErased = "textes réinitialisés !"
     //  weather Error messages
     case errorWeatherReception = "Pas de réception météo"
     //  GpsWeather Error messages

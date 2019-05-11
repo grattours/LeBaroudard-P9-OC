@@ -26,6 +26,8 @@ class TranslateViewController: UIViewController {
     @IBAction func TranslateButton(_ sender: Any) {
         if sourceText.text != "" {
             translateText()
+        } else {
+            self.presentAlert(message: .errorTranslationEmpty)
         }
     }
     
@@ -44,7 +46,7 @@ class TranslateViewController: UIViewController {
         targetText.text = nil
         LangageTranslation.source = "fr"
         LangageTranslation.target = "en"
-        // alert ?
+        self.presentAlert(message: .errorTranslationErased)
     }
     
     // reverse source and target language
@@ -76,12 +78,12 @@ class TranslateViewController: UIViewController {
     
     // data from the API
     func translateText() {
-        translateService.getTranslation(InputText: sourceText.text!) {(success, translatedText) in
+        translateService.getTranslation(InputText: sourceText.text) {(success, translatedText) in
             if success {
                 guard let translatedText  = translatedText else { return }
                 self.targetText.text = translatedText
             } else {
-                print(" translation failed" )
+                self.presentAlert(message: .errorTranslateReception)
             }
         }
     }
