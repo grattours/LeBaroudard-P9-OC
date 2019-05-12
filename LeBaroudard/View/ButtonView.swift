@@ -22,10 +22,9 @@ class ButtonView: UIButton {
     }
     
     func setup() {
-
+        backgroundColor = UIColor.white
         titleLabel?.textColor = .white
-        titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
-        
+        titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
         layer.cornerRadius = 10
         layer.shadowOffset = CGSize(width: 3, height: 3)
         layer.shadowOpacity = 0.5

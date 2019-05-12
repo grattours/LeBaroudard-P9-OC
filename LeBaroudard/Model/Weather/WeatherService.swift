@@ -13,12 +13,12 @@ import Foundation
 class WeatherService {
     
     private var task: URLSessionDataTask?
-    let weatherSession: URLSession
+    private let weatherSession: URLSession
     init(weatherSession:URLSession = URLSession(configuration: .default)) {
         self.weatherSession = weatherSession
     }
      // compose url endpoint with cities ids and options
-    func createWeatherRequest() -> String {
+     private func createWeatherRequest() -> String {
         let OptionsRequest = "&units=metric&lang=fr"
         let ApiKeyRequest = valueForAPIKey(named:"API_OpenWeathermap")
         let City01Id = "5128581"

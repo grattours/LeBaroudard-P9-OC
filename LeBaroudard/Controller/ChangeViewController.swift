@@ -13,20 +13,25 @@ class ChangeViewController: UIViewController {
     // outlet
         @IBOutlet weak var firstChangeTextField: UITextField!
         @IBOutlet weak var secondChangeTextField: UITextField!
-        
+    
         var changeService = ChangeService()
-        
         override func viewDidLoad() {
             super.viewDidLoad()
             self.hideKeyboardWhenTappedArrond()
         }
         
         @IBAction func ConvertButton(_ sender: Any) {
+            guard firstChangeTextField.text  != "" else {
+                self.presentAlert(message: .errorChangeInput)
+                return
+            }
             setupCurrencyData()
+            firstChangeTextField.text = ""
+            secondChangeTextField.text = ""
         }
-    
+
     // data from currency API
-        func setupCurrencyData() {
+         private func setupCurrencyData() {
             var AmountToConvert = 0.0
             guard let AmountInput = firstChangeTextField else {return}
             if let amount = AmountInput.text {
@@ -42,7 +47,15 @@ class ChangeViewController: UIViewController {
                     
                     guard let rate = DollarRate.rate else { return }
                     let totalConverted = AmountToConvert * rate
-                    self.secondChangeTextField.text = String(format: "%.2f", totalConverted)
+                    let formatter = NumberFormatter()
+                    formatter.numberStyle = .decimal
+                    formatter.locale = Locale(identifier: "fr-FR")
+                    if let input = formatter.string(for: AmountToConvert) {
+                        self.firstChangeTextField.text = input + " €"
+                    }
+                    if let output = formatter.string(for: totalConverted) {
+                        self.secondChangeTextField.text = output + " $"
+                    }
                 } else {
                     self.presentAlert(message: .errorChangeConverter)
                 }

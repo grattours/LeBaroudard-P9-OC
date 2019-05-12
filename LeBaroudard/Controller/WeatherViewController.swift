@@ -31,7 +31,7 @@ class WeatherViewController: UIViewController {
         setupWeatherData()
     }
     // data from weather API
-    func setupWeatherData() {
+     private func setupWeatherData() {
         weatherService.getWeather() { (success, weatherStruc) in
             if success {
                 guard let weatherStruc = weatherStruc else {return}
@@ -58,7 +58,7 @@ class WeatherViewController: UIViewController {
     } // end setup
 
     // why not calculate the difference ?
-    func setupJetLagData() {
+     private func setupJetLagData() {
         botDate.text = ("\(Date().toString())")
         topDate.text = ("\(Date().toStringNY())")
         }

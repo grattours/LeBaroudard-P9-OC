@@ -34,9 +34,6 @@ class GpsWeatherViewController: UIViewController {
         checkLocationServices()
     }
 
-//    override func viewWillAppear(_ animated: Bool) {
-//        print(locToWeather)
-//    }
     // at start setup location manager and autorisation
     func checkLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
@@ -54,7 +51,7 @@ class GpsWeatherViewController: UIViewController {
         }
     
     // weather data from the location
-    func setupWeatherData(_ loc4: String) {
+     private func setupWeatherData(_ loc4: String) {
         gpsWeatherService.getWeather(loc4) { (success, gpsWeatherStruc) in
             if success {
                 guard let gpsWeatherStruc = gpsWeatherStruc else {
@@ -127,7 +124,7 @@ class GpsWeatherViewController: UIViewController {
 } // end class
 
 
-// -------------------------------------------------- EXTENSIONS - DELEGATE ----------------------------------------
+// ------------------------------- EXTENSIONS - DELEGATE
 
 // autorisation has changeg
 extension GpsWeatherViewController: CLLocationManagerDelegate {

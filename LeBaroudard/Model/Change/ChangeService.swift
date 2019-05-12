@@ -11,12 +11,12 @@ import Foundation
 class ChangeService {
     var firstAmountToConvert = 0.0
     private var task: URLSessionTask?
-    let changeSession: URLSession
+    private let changeSession: URLSession
     init(changeSession: URLSession = URLSession(configuration: .default)) {
         self.changeSession = changeSession
     }
     // compose endpoint for API
-    func createChangeRequest()-> String {
+     private func createChangeRequest()-> String {
         let ApiKeyRequest = valueForAPIKey(named:"API_Fixer")
         let Change01 = "EUR"
         let Change02 = "USD"

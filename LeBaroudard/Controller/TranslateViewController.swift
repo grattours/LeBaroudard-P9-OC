@@ -41,7 +41,7 @@ class TranslateViewController: UIViewController {
     }
     
     // clear source and target texts
-    func clearTexts() {
+    private func clearTexts() {
         sourceText.text = nil
         targetText.text = nil
         LangageTranslation.source = "fr"
@@ -50,8 +50,7 @@ class TranslateViewController: UIViewController {
     }
     
     // reverse source and target language
-    func reverserSourceTarget() {
-        print("reverseSourceTarget")
+     func reverserSourceTarget() {
         let TextIn = sourceText.text
         let TextOut = targetText.text
         let TextTemp = sourceText.text
@@ -77,7 +76,7 @@ class TranslateViewController: UIViewController {
     }
     
     // data from the API
-    func translateText() {
+     private func translateText() {
         translateService.getTranslation(InputText: sourceText.text) {(success, translatedText) in
             if success {
                 guard let translatedText  = translatedText else { return }
