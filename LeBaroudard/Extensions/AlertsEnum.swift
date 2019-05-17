@@ -29,4 +29,6 @@ enum errorMessage: String {
     case errorGpsWeatherCenterLoc = "pas centrage de localisation "
     case errorGpsWeatherLocationManager = "location manager indisponible"
     case errorGpsWeatherGeocoder = " Geocoder indisponible"
+    case errorGpsLocationDenied = " Localisation non autorisée"
+    case errorGpsLocationRestricted = " Localisation restreinte"
 }

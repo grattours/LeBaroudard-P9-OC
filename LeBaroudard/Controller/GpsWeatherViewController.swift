@@ -73,6 +73,7 @@ class GpsWeatherViewController: UIViewController {
 
     // locate user on the map
     func startTackingUserLocation() {
+        //print("StartTaking")
         mapView.showsUserLocation = true
         centerViewOnUserLocation()
         locationManager.startUpdatingLocation()
@@ -105,12 +106,12 @@ class GpsWeatherViewController: UIViewController {
         case .authorizedWhenInUse:
             startTackingUserLocation()
         case .denied:
-            // faire une alerte "autoriser la localisation"
+            self.presentAlert(message: .errorGpsLocationDenied)
             break
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
         case .restricted:
-            // faire une alerte
+             self.presentAlert(message: .errorGpsLocationRestricted)
             break
         case .authorizedAlways:
             startTackingUserLocation()

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension Date {
-    // return date in french text
+// return date in french text
     func toString() -> String {
         let formatter = DateFormatter()
         //formatter.dateStyle = .long
@@ -29,7 +29,7 @@ extension Date {
         formatter.timeZone = TimeZone(abbreviation: "EDT")
         return(formatter.string(from: self))
     }
-    // returns hh mm ss from a date
+// returns hh mm ss from a date
     func toHHMSS() -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "hh:mm:ss"
@@ -47,7 +47,7 @@ extension UIViewController {
         view.endEditing(true)
     }
     
-    // same alerte with title and message as parameter
+// same alerte with title and message as parameter
     func presentAlert(message: errorMessage) {
         let alertVC = UIAlertController(title: "Erreur", message: message.rawValue, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
@@ -70,5 +70,43 @@ extension UIStackView {
         subView.backgroundColor = color
         subView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         insertSubview(subView, at: 0)
+    }
+}
+
+// more simple to manipulate  custom colors
+extension UIColor {
+    public class var marron: UIColor {
+        return UIColor(red: 106/255, green: 99/255, blue: 87/255, alpha: 1)
+    }
+    public class var jaune: UIColor {
+        return UIColor(red: 217/255, green: 204/255, blue: 154/255, alpha: 1)
+    }
+    
+    public class var vert: UIColor {
+        return UIColor(red: 196/255, green: 214/255, blue: 184/255, alpha: 1)
+    }
+    public class var bleu: UIColor {
+        return UIColor(red: 86/255, green: 111/255, blue: 146/255, alpha: 1)
+    }
+}
+
+// convert color for UserDefault
+extension UserDefaults {
+    func colorForKey(key: String) -> UIColor? {  // uiView.backgroundColor = defaults.colorForKey(key: "BackColor")
+        if let colorData = data(forKey: key),
+            let color = try? NSKeyedUnarchiver.unarchivedObject(ofClass: UIColor.self, from: colorData)
+        {
+            return color
+        } else {
+            return nil
+        }
+    }
+    
+    func setColor(color: UIColor?, forKey key: String) { // defaults.setColor(color: uicolorBack, forKey: "BackColor")
+        if let color = color,
+            let colorData = try? NSKeyedArchiver.archivedData(withRootObject: color, requiringSecureCoding: true)
+        {
+            set(colorData, forKey: key)
+        }
     }
 }

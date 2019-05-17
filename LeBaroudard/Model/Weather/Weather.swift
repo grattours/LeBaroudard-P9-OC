@@ -10,6 +10,17 @@
 // API Struct the same for Weather and GpsWeather
 import Foundation
 
+// for endpoint with towns ids
+struct WeatherStruc: Decodable {
+    let list: [List]
+}
+
+struct List: Decodable {
+    let coord: Coord?
+    let weather: [Weather]
+    let main: Main
+    let name: String
+}
 
 // for endpoint with coordinate
 struct GpsWeatherStruc: Decodable {
@@ -64,14 +75,4 @@ struct Wind: Decodable {
     let deg: Int?
 }
 
-// for endpoint with towns ids
-struct WeatherStruc: Decodable {
-    let list: [List]
-}
 
-struct List: Decodable {
-    let coord: Coord?
-    let weather: [Weather]
-    let main: Main
-    let name: String
-}
