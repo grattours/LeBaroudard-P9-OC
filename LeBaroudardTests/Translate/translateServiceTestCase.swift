@@ -11,8 +11,6 @@ import XCTest
 
 class TranslateServiceTestCase: XCTestCase {
     
-//    override func setUp() {
-//    }
     
 // case :   correct data correct response and no error
     func testGetTranslateShouldSuccessCallbackIfNoErrorAndCorrectData() {

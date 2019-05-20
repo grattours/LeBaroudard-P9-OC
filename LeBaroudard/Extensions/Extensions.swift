@@ -36,7 +36,7 @@ extension Date {
         return(formatter.string(from: self))
     }
 }
-
+// Hide keyboard on Tap gesture
 extension UIViewController {
     func hideKeyboardWhenTappedArrond() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dissmissKeyboard))
@@ -49,7 +49,7 @@ extension UIViewController {
     
 // same alerte with title and message as parameter
     func presentAlert(message: errorMessage) {
-        let alertVC = UIAlertController(title: "Erreur", message: message.rawValue, preferredStyle: .alert)
+        let alertVC = UIAlertController(title: "Alerte", message: message.rawValue, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         present(alertVC, animated: true, completion: nil)
     }

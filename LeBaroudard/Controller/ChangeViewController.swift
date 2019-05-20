@@ -76,6 +76,7 @@ class ChangeViewController: UIViewController {
                     let formatter = NumberFormatter()
                     formatter.numberStyle = .decimal
                     formatter.locale = Locale(identifier: "fr-FR")
+                    formatter.roundingIncrement = 2
                     if let input = formatter.string(for: AmountToConvert) {
                         self.firstChangeTextField.text = input + " €"
                     }
